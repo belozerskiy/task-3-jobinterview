@@ -14,12 +14,3 @@
   </v-row>
 </template>
 
-<script>
-export default {
-  name: 'Index',
-  // fetch(context) {
-  //   console.log(222)
-  // },
-  // watchQuery: ['page', 'filters'],
-}
-</script>
