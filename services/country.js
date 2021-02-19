@@ -1,5 +1,3 @@
-// "Прямое соединение" - без промежуточных стран, "Один дополнительный узел" - с одной промежуточной страной и т.д.
-
 import { response } from '@/services/__mock__'
 import countryAdapter from '@/adapters/countryAdapter'
 
