@@ -12,9 +12,7 @@
 
 <script>
 import { createNamespacedHelpers } from 'vuex'
-import {
-  SET_PAGINATION_PAGE_MUTATION,
-} from '@/store/pagination'
+import { SET_PAGINATION_PAGE_MUTATION } from '@/store/pagination'
 
 const { mapState, mapMutations } = createNamespacedHelpers('pagination')
 
@@ -32,9 +30,7 @@ export default {
         this.$router.push({ query: { ...query, page } })
       }
     },
-    ...mapMutations([
-      SET_PAGINATION_PAGE_MUTATION,
-    ]),
+    ...mapMutations([SET_PAGINATION_PAGE_MUTATION]),
   },
 }
 </script>
