@@ -12,8 +12,5 @@ export default function routesAdapter(companies) {
       })
     )
   })
-
-  // result.sort((a, b) => a.price - b.price)
-
   return result
 }
