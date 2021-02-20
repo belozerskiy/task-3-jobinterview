@@ -14,8 +14,6 @@
 import { createNamespacedHelpers } from 'vuex'
 import {
   SET_PAGINATION_PAGE_MUTATION,
-  SET_PAGINATION_PAGE_NEXT_MUTATION,
-  SET_PAGINATION_PAGE_PREV_MUTATION,
 } from '@/store/pagination'
 
 const { mapState, mapMutations } = createNamespacedHelpers('pagination')
@@ -36,8 +34,6 @@ export default {
     },
     ...mapMutations([
       SET_PAGINATION_PAGE_MUTATION,
-      SET_PAGINATION_PAGE_NEXT_MUTATION,
-      SET_PAGINATION_PAGE_PREV_MUTATION,
     ]),
   },
 }
