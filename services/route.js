@@ -76,7 +76,6 @@ export default {
           return sumOfA - sumOfB
         })
 
-        console.log(meta.limit)
         meta.page = meta.page ?? 1
         meta.total = result.length / meta.limit
 
