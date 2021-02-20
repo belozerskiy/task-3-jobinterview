@@ -7,7 +7,7 @@ const delay = (time) =>
   })
 
 export default {
-  async find({ source, destination, filters, meta = { page: 1 } }) {
+  async find({ source, destination, filters, meta = { page: 1, limit: 4 } }) {
     if (source && destination) {
       try {
         const json = await Promise.resolve(response.data.company)
@@ -64,7 +64,7 @@ export default {
           })
         }
 
-        result = result.sort((a, b) => {
+        result.sort((a, b) => {
           const sumOfA = a
             .map((v) => v.price)
             .reduce((accumulator, currentValue) => accumulator + currentValue)
@@ -76,12 +76,12 @@ export default {
           return sumOfA - sumOfB
         })
 
-        const limit = 4
+        console.log(meta.limit)
         meta.page = meta.page ?? 1
-        meta.total = result.length / 4
+        meta.total = result.length / meta.limit
 
-        const leftOffset = (meta.page - 1) * limit
-        const rightOffset = meta.page * limit
+        const leftOffset = (meta.page - 1) * meta.limit
+        const rightOffset = meta.page * meta.limit
 
         result = result.slice(leftOffset, rightOffset)
         await delay(1000)

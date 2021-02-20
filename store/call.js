@@ -35,7 +35,7 @@ export const actions = {
         source: source?.value,
         destination: destination?.value,
         filters,
-        meta: { page: Number(page) },
+        meta: { page: Number(page), limit: 4 },
       })
       commit(`pagination/${SET_PAGINATION_MUTATION}`, pagination, {
         root: true,
