@@ -21,7 +21,7 @@
   },
   "dependencies": {
     "core-js": "^3.8.3",
-    "nuxt": "2.14"
+    "nuxt": "2.15"
   },
   "devDependencies": {
     "@commitlint/cli": "^11.0.0",
